@@ -5,4 +5,14 @@
 //  Created by Taylor Lea on 2/22/24.
 //
 
-import Foundation
+import SwiftUI
+
+struct RecentlyViewed: View {
+    var body: some View {
+        Text("Recently Viewed")
+    }
+}
+
+#Preview {
+    RecentlyViewed()
+}
