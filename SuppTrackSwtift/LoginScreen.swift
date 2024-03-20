@@ -13,9 +13,16 @@ struct LoginScreen: View {
     @State private var email = ""
     @State private var password = ""
     @State var isLogin: Bool = false
+    @State private var showText: Bool = false
+    @State private var incorrectLogin: Bool = false
+    @State private var incorrectLoginMessage = ""
+    @State var invalidEmail = 0
+    @State var invalidPassword = 0
     
     var body: some View {
         ZStack {
+            
+            //background images
             Image("supptrack background2")
                 .resizable()
                 .offset(x:0, y:-60)
@@ -33,36 +40,76 @@ struct LoginScreen: View {
                         .multilineTextAlignment(.center)
                 
                 //email and password
-                TextField("Enter Email", text: self.$email)
-                    .frame(width: /*@START_MENU_TOKEN@*/180.0/*@END_MENU_TOKEN@*/, height: 50)
-                    .offset(x: 0, y:100)
-                SecureField("Enter Password", text: self.$password)
-                    .frame(width: /*@START_MENU_TOKEN@*/180.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/5.0/*@END_MENU_TOKEN@*/)
-                    .offset(x: 0, y:100)
                 
-                Button("login", action: loginUser)
-                
-                //when you click on login go to home screen
                 VStack {
                     
+                    HStack{
+                        TextField("Enter Email", text: self.$email)
+                            .frame(width: /*@START_MENU_TOKEN@*/180.0/*@END_MENU_TOKEN@*/, height: 50)
+                    }.offset(x: -20, y: 120)
                     
+                    
+                    HStack{
+                        if showText{
+                            Button(action : {
+                                showText.toggle()
+                            }){
+                                Image(systemName: "eye.slash")
+                                    .foregroundColor(.gray)
+                            }.offset(x:170, y:101)
+                            
+                            TextField("Enter Password", text: self.$password)
+                                .frame(width: /*@START_MENU_TOKEN@*/180.0/*@END_MENU_TOKEN@*/, height: 50)
+                                .offset(x: -37, y: 100)
+                                
+                        }else{
+                            Button(action : {
+                                showText.toggle()
+                            })
+                            {
+                                Image(systemName: "eye")
+                                    .foregroundColor(.gray)
+                            }
+                            .offset(x:170, y:101)
+                            SecureField("Enter Password", text: self.$password)
+                                .frame(width: /*@START_MENU_TOKEN@*/180.0/*@END_MENU_TOKEN@*/, height: 50)
+                                .offset(x: -35, y: 100)
+                        }
+                        
+                    }
+                
+                    
+                    //when you click on login go to home screen
+                    Button("login", action: {
+                        loginUser()
+                        incorrectLoginMessage = "incorrect username or password"
+                    })
+                        .offset(y:110)
+                                      
                     if isLogin == true{
                     NavigationLink("Login", destination: HomeScreen(), isActive: $isLogin)
                         .offset(x: 0, y:110)
                         .simultaneousGesture(TapGesture().onEnded {
-                            
-                            loginUser()
-                        })
-                    }
-                                       
+                                loginUser()
+                                          })
+                                      }
                     
-                    Text("Forgot Password?")
+                    Text(incorrectLoginMessage)
+                        .offset(y: 105)
+                        .fontWeight(.thin)
+                        .font(.system(size: 14))
+                        .foregroundColor(.red)
+                        .offset(y: -35)
+                    
+                    NavigationLink("Forgot Password?", destination: ForgotEmailMessage())
                         .fontWeight(.thin)
                         .foregroundColor(Color.blue)
                         .underline()
                         .font(
                             .system(size: 12))
-                        .offset(x:0, y:120)
+                        .offset(x:0, y:100)
+                        
+                
                 }
                 
             }
@@ -83,6 +130,9 @@ struct LoginScreen: View {
               
           }
       }
+    
+ 
+
 }
 
 

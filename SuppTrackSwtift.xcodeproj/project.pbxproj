@@ -48,6 +48,8 @@
 		D6772ED32B8FEF9700C8267A /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D6772ED22B8FEF9700C8267A /* FirebaseRemoteConfigSwift */; };
 		D6772ED52B8FEF9700C8267A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = D6772ED42B8FEF9700C8267A /* FirebaseStorage */; };
 		D6772ED72B8FEF9700C8267A /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = D6772ED62B8FEF9700C8267A /* FirebaseStorageCombine-Community */; };
+		D6A008C82BA8ECF500704F6C /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A008C72BA8ECF500704F6C /* SideMenuView.swift */; };
+		D6A008CA2BA8EDF700704F6C /* SideMenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A008C92BA8EDF700704F6C /* SideMenuHeaderView.swift */; };
 		D6BA75B42B90E7D6007698DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6BA75B32B90E7D6007698DD /* GoogleService-Info.plist */; };
 		D6BA75B62B90E876007698DD /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D6BA75B52B90E876007698DD /* FirebaseAnalytics */; };
 		D6BA75B82B90E876007698DD /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = D6BA75B72B90E876007698DD /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -77,6 +79,7 @@
 		D6BA75E82B90E876007698DD /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = D6BA75E72B90E876007698DD /* FirebaseStorage */; };
 		D6BA75EA2B90E876007698DD /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = D6BA75E92B90E876007698DD /* FirebaseStorageCombine-Community */; };
 		D6BA75EE2B90E8F0007698DD /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BA75ED2B90E8F0007698DD /* FirebaseHelper.swift */; };
+		D6F8F8652B98D0A00051AA04 /* ForgotEmailMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F8F8642B98D0A00051AA04 /* ForgotEmailMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,8 +99,11 @@
 		D66D89852B87E12A0042C719 /* MarketPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPlace.swift; sourceTree = "<group>"; };
 		D66D89872B87E1370042C719 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		D67F3ACE2B9683F900B64E89 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D6A008C72BA8ECF500704F6C /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		D6A008C92BA8EDF700704F6C /* SideMenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuHeaderView.swift; sourceTree = "<group>"; };
 		D6BA75B32B90E7D6007698DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D6BA75ED2B90E8F0007698DD /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
+		D6F8F8642B98D0A00051AA04 /* ForgotEmailMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotEmailMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,8 +202,11 @@
 				D66D89852B87E12A0042C719 /* MarketPlace.swift */,
 				D66D89872B87E1370042C719 /* Menu.swift */,
 				D66D89792B87DFD70042C719 /* HomeScreen.swift */,
+				D6A008C72BA8ECF500704F6C /* SideMenuView.swift */,
+				D6A008C92BA8EDF700704F6C /* SideMenuHeaderView.swift */,
 				D66AE50B2B7D7E4600B5AF64 /* CreateAccount.swift */,
 				D66AE5092B7D7D9D00B5AF64 /* LoginScreen.swift */,
+				D6F8F8642B98D0A00051AA04 /* ForgotEmailMessage.swift */,
 				D66AE4FF2B7D7B6600B5AF64 /* Assets.xcassets */,
 				D66AE5012B7D7B6600B5AF64 /* Preview Content */,
 				D6BA75ED2B90E8F0007698DD /* FirebaseHelper.swift */,
@@ -344,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D66AE50E2B7D80B400B5AF64 /* CreateAccountTwo.swift in Sources */,
+				D6A008CA2BA8EDF700704F6C /* SideMenuHeaderView.swift in Sources */,
 				D66D89802B87E0F60042C719 /* SystemPreferences.swift in Sources */,
 				D66AE4FE2B7D7B6400B5AF64 /* ContentView.swift in Sources */,
 				D66D897A2B87DFD70042C719 /* HomeScreen.swift in Sources */,
@@ -354,6 +364,8 @@
 				D66AE50A2B7D7D9D00B5AF64 /* LoginScreen.swift in Sources */,
 				D6BA75EE2B90E8F0007698DD /* FirebaseHelper.swift in Sources */,
 				D66D89842B87E11C0042C719 /* Scanner.swift in Sources */,
+				D6F8F8652B98D0A00051AA04 /* ForgotEmailMessage.swift in Sources */,
+				D6A008C82BA8ECF500704F6C /* SideMenuView.swift in Sources */,
 				D66AE50C2B7D7E4600B5AF64 /* CreateAccount.swift in Sources */,
 				D66D89862B87E12A0042C719 /* MarketPlace.swift in Sources */,
 			);

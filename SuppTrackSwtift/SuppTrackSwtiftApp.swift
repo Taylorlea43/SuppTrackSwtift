@@ -11,6 +11,7 @@ import FirebaseCore
 @main
 struct SuppTrackSwtiftApp: App {
     @UIApplicationDelegateAdaptor(FirebaseAppDelegate.self) var delegate
+
     var body: some Scene {
         WindowGroup {
             NavigationView {

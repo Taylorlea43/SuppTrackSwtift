@@ -9,7 +9,29 @@ import SwiftUI
 
 struct SideMenuHeaderView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            HStack{
+                Image(systemName: "person.circle.fill")
+                    .imageScale(.large)
+                
+                Text("Profile")
+            }
+            .offset(x:-7)
+            
+            HStack{
+                Image(systemName: "gearshape")
+                    .imageScale(.large)
+                Text("Settings")
+            }
+            .offset(y: 20)
+            
+            HStack{
+                Image(systemName: "rectangle.portrait.and.arrow.forward")
+                    .imageScale(.large)
+                Text("Logout")
+            }
+            .offset( x: -3, y: 40)
+        }
     }
 }
 
