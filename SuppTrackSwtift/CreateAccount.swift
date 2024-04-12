@@ -9,7 +9,7 @@ import SwiftUI
 import FirebaseAuth
 
 struct CreateAccount: View {
-    
+    @ObservedObject var userData: UserDataModel
     @State private var isLogin = false
     @State var email = ""
     @State var password = ""
@@ -37,7 +37,7 @@ struct CreateAccount: View {
                     .multilineTextAlignment(.center)
                 
                 //enter email and password
-                TextField("Enter Email", text: $email)
+                TextField("Enter Email", text: $userData.email)
                     .frame(width: 180, height: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/)
                     .offset(x:0, y:70)
                 
@@ -61,7 +61,7 @@ struct CreateAccount: View {
                     .offset(y: 92)
                 
                 if(self.password == self.confirmPassword){
-                    NavigationLink("Next", destination: CreateAccountTwo())
+                    NavigationLink("Next", destination: CreateAccountTwo(userData: userData))
                         .simultaneousGesture(TapGesture().onEnded {
                             createUser()
                         })
@@ -74,7 +74,7 @@ struct CreateAccount: View {
         }
     }
     private func createUser() {
-        Auth.auth().createUser(withEmail: email, password: password, completion: { result, err in
+        Auth.auth().createUser(withEmail: userData.email, password: password, completion: { result, err in
             if let err = err {
                 print("Failed due to error:", err)
                 return
@@ -84,6 +84,6 @@ struct CreateAccount: View {
     }
 }
 
-#Preview {
-    CreateAccount()
-}
+/*#Preview {
+    CreateAccount(userData: UserDataModel)
+}*/

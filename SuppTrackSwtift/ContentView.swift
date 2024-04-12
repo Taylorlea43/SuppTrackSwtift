@@ -9,7 +9,7 @@ import SwiftUI
 import Firebase
 
 struct ContentView: View {
-    
+    @StateObject var userData = UserDataModel()
     @State var isLoginTapped = false
     var body: some View {
         
@@ -30,7 +30,7 @@ struct ContentView: View {
                             .foregroundStyle(Color(red: 0.3, green: 0.2, blue: 1.0))
                             .offset(x: 0, y:-225)
                             
-                       NavigationLink("Login", destination: LoginScreen())
+                        NavigationLink("Login", destination: LoginScreen(userData: userData))
                             .background(LinearGradient(gradient: Gradient(colors: [.white, .white]), startPoint: .leading, endPoint: .trailing)
                                 .cornerRadius(60)
                                 .frame(width: 80.0, height: 40.0))
@@ -40,7 +40,7 @@ struct ContentView: View {
                         
                             
                         
-                        NavigationLink("Sign Up", destination: CreateAccount())
+                        NavigationLink("Sign Up", destination: CreateAccount(userData: userData))
                              .offset(x: 75, y:192)
                             
                             Text("New to SuppTrack?")
@@ -52,7 +52,7 @@ struct ContentView: View {
                 }
             }
             
-            
+            .navigationBarBackButtonHidden(true)
             }
                     
               

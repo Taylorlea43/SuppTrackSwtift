@@ -5,20 +5,18 @@
 //  Created by Taylor Lea on 2/14/24.
 //
 import SwiftUI
+import UIKit
 import Firebase
 import FirebaseAuth
 
 struct LoginScreen: View {
-    
-    @State private var email = ""
-    @State private var password = ""
+    @ObservedObject var userData: UserDataModel
     @State var isLogin: Bool = false
     @State private var showText: Bool = false
     @State private var incorrectLogin: Bool = false
     @State private var incorrectLoginMessage = ""
     @State var invalidEmail = 0
     @State var invalidPassword = 0
-    
     var body: some View {
         ZStack {
             
@@ -44,8 +42,10 @@ struct LoginScreen: View {
                 VStack {
                     
                     HStack{
-                        TextField("Enter Email", text: self.$email)
+                        TextField("Enter Email", text: $userData.email)
                             .frame(width: /*@START_MENU_TOKEN@*/180.0/*@END_MENU_TOKEN@*/, height: 50)
+                        
+                    
                     }.offset(x: -20, y: 120)
                     
                     
@@ -58,10 +58,10 @@ struct LoginScreen: View {
                                     .foregroundColor(.gray)
                             }.offset(x:170, y:101)
                             
-                            TextField("Enter Password", text: self.$password)
+                            TextField("Enter Password", text: $userData.Password)
                                 .frame(width: /*@START_MENU_TOKEN@*/180.0/*@END_MENU_TOKEN@*/, height: 50)
                                 .offset(x: -37, y: 100)
-                                
+                            
                         }else{
                             Button(action : {
                                 showText.toggle()
@@ -71,12 +71,13 @@ struct LoginScreen: View {
                                     .foregroundColor(.gray)
                             }
                             .offset(x:170, y:101)
-                            SecureField("Enter Password", text: self.$password)
+                            SecureField("Enter Password", text: $userData.Password)
                                 .frame(width: /*@START_MENU_TOKEN@*/180.0/*@END_MENU_TOKEN@*/, height: 50)
                                 .offset(x: -35, y: 100)
                         }
                         
                     }
+                }
                 
                     
                     //when you click on login go to home screen
@@ -84,15 +85,15 @@ struct LoginScreen: View {
                         loginUser()
                         incorrectLoginMessage = "incorrect username or password"
                     })
-                        .offset(y:110)
+                        .offset(y:120)
                                       
                     if isLogin == true{
-                    NavigationLink("Login", destination: HomeScreen(), isActive: $isLogin)
+                    NavigationLink("login", destination: HomeScreen(userData: userData), isActive: $isLogin)
                         .offset(x: 0, y:110)
                         .simultaneousGesture(TapGesture().onEnded {
                                 loginUser()
                                           })
-                                      }
+                    }
                     
                     Text(incorrectLoginMessage)
                         .offset(y: 105)
@@ -107,10 +108,8 @@ struct LoginScreen: View {
                         .underline()
                         .font(
                             .system(size: 12))
-                        .offset(x:0, y:100)
+                        .offset(x:0, y:110)
                         
-                
-                }
                 
             }
         }
@@ -119,13 +118,14 @@ struct LoginScreen: View {
     }
     
     private func loginUser() {
-          Auth.auth().signIn(withEmail: email, password: password) { result, err in
+        Auth.auth().signIn(withEmail: userData.email, password: userData.Password) { result, err in
               if let err = err {
                   print("Failed due to error:", err)
                   isLogin = false
                   return
               }
-              print("Successfully logged in with ID: \(result?.user.uid ?? "")")
+              print("Successfully logged in with Email: \(result?.user.email ?? "")")
+              //userData.email = "\(result?.user.email ?? "")"
               isLogin = true
               
           }
@@ -136,6 +136,6 @@ struct LoginScreen: View {
 }
 
 
-#Preview {
-    LoginScreen()
-}
+/*#Preview {
+    LoginScreen(userData: UserDataModel())
+}*/

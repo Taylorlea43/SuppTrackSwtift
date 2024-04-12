@@ -10,9 +10,10 @@ import FirebaseAuth
 
 struct CreateAccountTwo: View {
     @State private var birthday = Date()
-    @State private var association = 0
+    @State var association = 0
     @State private var alergy = 0
     @State var selectedRows = Set<String>()
+    @ObservedObject var userData: UserDataModel
     
     @State var allergies: [allergy] = [allergy(name: "eggs"),
                                     allergy(name: "wheat"),
@@ -97,7 +98,7 @@ struct CreateAccountTwo: View {
             }
         }
         
-        NavigationLink("Create Account", destination: HomeScreen())
+        NavigationLink("Create Account", destination: HomeScreen(userData: userData))
              .offset(x: 0, y: -100)
         
         .padding()
@@ -112,5 +113,5 @@ struct allergy{
 }
 
 #Preview {
-    CreateAccountTwo()
+    CreateAccountTwo(userData: UserDataModel())
 }

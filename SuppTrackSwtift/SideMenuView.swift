@@ -10,6 +10,7 @@ import SwiftUI
 struct SideMenuView: View {
     
     @Binding var isShowing: Bool
+    @ObservedObject var userData: UserDataModel
     
     var body: some View {
         ZStack{
@@ -21,23 +22,23 @@ struct SideMenuView: View {
                 
                 HStack{
                     VStack(alignment: .leading, spacing: 32){
-                        SideMenuHeaderView()
-                        
+                        SideMenuHeaderView(userData: userData)
+                            .offset(y:30)
                         Spacer()
                     }
                     .padding()
                     .frame(width: 200, alignment: .leading)
                     .background(.white)
                     
+                    
                     Spacer()
                 }
             }
         }
         .transition(.move(edge: .leading))
-        .animation(.easeInOut,value: isShowing)
     }
 }
 
 #Preview {
-    SideMenuView(isShowing: .constant(true))
+    SideMenuView(isShowing: .constant(true), userData: UserDataModel())
 }

@@ -10,32 +10,33 @@ import SwiftUI
 struct HomeScreen: View {
     
     @State private var showMenu = false
+    @ObservedObject var userData: UserDataModel
     
     var body: some View {
         NavigationStack {
             ZStack {
+                Image("HomeScreen Background")
+                    .resizable()
+                    .offset(x:0, y:-60)
+                    .frame(width: 395, height: 800)
                 VStack {
-                    NavigationLink("Settings", destination: Settings())
-                        .offset(x:0, y:30)
-                    
-                    NavigationLink("System Preferences", destination: SystemPreferences())
-                        .offset(x:0, y:30)
-                    
-                    NavigationLink("Recently Viewed", destination: RecentlyViewed())
-                        .offset(x:0, y:30)
-                    
-                    NavigationLink("Scanner", destination: Scanner())
-                        .offset(x:0, y:30)
-                    
-                    NavigationLink("Marketplace", destination: MarketPlace())
-                        .offset(x:0, y: 30)
-                    
-                    NavigationLink("Menu", destination: Menu())
-                        .offset(x:0, y:30)
-                    
+                    TabView(selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {
+                        Welcome()
+                            .tabItem {
+                                Label("Home", systemImage: "house")
+                            }
+                        Scanner()
+                            .tabItem {
+                                Label("Scanner", systemImage: "barcode.viewfinder")
+                            }
+                        
+                        MarketPlace(userData: userData)
+                            .tabItem {
+                                Label("Marketplace", systemImage: "storefront")
+                            }
+                    }
                 }
-                
-                SideMenuView(isShowing: $showMenu)
+                SideMenuView(isShowing: $showMenu, userData: userData)
             }
             .navigationBarTitleDisplayMode(.inline)
             .toolbar{
@@ -48,13 +49,10 @@ struct HomeScreen: View {
                 }
         }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 
-/*struct SideView: View{
-    
+/*#Preview {
+    HomeScreen(userData: UserDataModel(), ingredientResponse: IngredientResponse())
 }*/
-
-#Preview {
-    HomeScreen()
-}
