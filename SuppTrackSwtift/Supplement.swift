@@ -20,7 +20,3 @@ struct ingredient_list: Decodable, Identifiable{
         case id = "food_name"
     }
 }
-
-
-
-
