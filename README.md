@@ -13,6 +13,13 @@ Install XCode to your IOS device
 2. in xcode navigate to the source control menu
 3. click clone and paste the URL
 
+##Nutritionix API
+link to get API key: https://developer.nutritionix.com/signup
+API documentation: https://developer.nutritionix.com/docs/v2
+
+##Firebase
+Documentation: https://firebase.google.com/docs
+
 #Authors
 Taylor Lea
 
