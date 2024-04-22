@@ -201,28 +201,14 @@
 		D66AE4FA2B7D7B6400B5AF64 /* SuppTrackSwtift */ = {
 			isa = PBXGroup;
 			children = (
-				D6BA75B32B90E7D6007698DD /* GoogleService-Info.plist */,
+				D68FB7092BD715EA00E88D30 /* HomeScreen */,
+				D68FB7082BD715AB00E88D30 /* Account */,
+				D68FB7072BD7159400E88D30 /* Menu */,
+				D68FB7062BD7156800E88D30 /* Firebase */,
 				D66AE4FB2B7D7B6400B5AF64 /* SuppTrackSwtiftApp.swift */,
-				D66AE50D2B7D80B400B5AF64 /* CreateAccountTwo.swift */,
 				D66AE4FD2B7D7B6400B5AF64 /* ContentView.swift */,
-				D66D897B2B87E0D80042C719 /* Settings.swift */,
-				D66D89792B87DFD70042C719 /* HomeScreen.swift */,
-				D66D89852B87E12A0042C719 /* MarketPlace.swift */,
-				D66D89832B87E11C0042C719 /* Scanner.swift */,
-				D690E2982BBAF9AC00E1E389 /* Welcome.swift */,
-				D6A008CB2BAB892000704F6C /* Profile.swift */,
-				D6322A9B2BC83C0F001943C5 /* ProfileViewModel.swift */,
-				D6322A9F2BC8B09E001943C5 /* UserDataModel.swift */,
-				D6322A9D2BC867C4001943C5 /* Supplement.swift */,
-				D69840502BD01AA900E188D7 /* APIView.swift */,
-				D6A008C72BA8ECF500704F6C /* SideMenuView.swift */,
-				D6A008C92BA8EDF700704F6C /* SideMenuHeaderView.swift */,
-				D66AE50B2B7D7E4600B5AF64 /* CreateAccount.swift */,
-				D66AE5092B7D7D9D00B5AF64 /* LoginScreen.swift */,
-				D6F8F8642B98D0A00051AA04 /* ForgotEmailMessage.swift */,
 				D66AE4FF2B7D7B6600B5AF64 /* Assets.xcassets */,
 				D66AE5012B7D7B6600B5AF64 /* Preview Content */,
-				D6BA75ED2B90E8F0007698DD /* FirebaseHelper.swift */,
 			);
 			path = SuppTrackSwtift;
 			sourceTree = "<group>";
@@ -233,6 +219,52 @@
 				D66AE5022B7D7B6600B5AF64 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D68FB7062BD7156800E88D30 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				D6BA75B32B90E7D6007698DD /* GoogleService-Info.plist */,
+				D6BA75ED2B90E8F0007698DD /* FirebaseHelper.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		D68FB7072BD7159400E88D30 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				D66D897B2B87E0D80042C719 /* Settings.swift */,
+				D6A008CB2BAB892000704F6C /* Profile.swift */,
+				D6322A9B2BC83C0F001943C5 /* ProfileViewModel.swift */,
+				D6A008C72BA8ECF500704F6C /* SideMenuView.swift */,
+				D6A008C92BA8EDF700704F6C /* SideMenuHeaderView.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		D68FB7082BD715AB00E88D30 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				D66AE50D2B7D80B400B5AF64 /* CreateAccountTwo.swift */,
+				D6322A9F2BC8B09E001943C5 /* UserDataModel.swift */,
+				D66AE50B2B7D7E4600B5AF64 /* CreateAccount.swift */,
+				D66AE5092B7D7D9D00B5AF64 /* LoginScreen.swift */,
+				D6F8F8642B98D0A00051AA04 /* ForgotEmailMessage.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		D68FB7092BD715EA00E88D30 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D66D89792B87DFD70042C719 /* HomeScreen.swift */,
+				D66D89852B87E12A0042C719 /* MarketPlace.swift */,
+				D6322A9D2BC867C4001943C5 /* Supplement.swift */,
+				D69840502BD01AA900E188D7 /* APIView.swift */,
+				D66D89832B87E11C0042C719 /* Scanner.swift */,
+				D690E2982BBAF9AC00E1E389 /* Welcome.swift */,
+			);
+			path = HomeScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
