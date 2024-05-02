@@ -82,22 +82,10 @@ struct CreateAccountTwo: View {
                 }.listStyle(.inset)
                     .offset(y:350)
                     .environment(\.defaultMinListRowHeight, 5)
-                
-            
-                
-                //Allergy Preferences
-               /*
-                Picker(selection:
-                        $alergy, label: Text("Assocaiation Guidelines")) {
-                    ForEach(0..<allergies.count){
-                        Text(self.allergies[$0]).tag($0)
-                    }
-                }.offset(x:0, y:91)*/
-            
-               
             }
         }
         
+        //go to create account 2 view
         NavigationLink("Create Account", destination: HomeScreen(userData: userData))
              .offset(x: 0, y: -100)
         

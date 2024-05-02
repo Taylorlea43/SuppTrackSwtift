@@ -15,11 +15,11 @@ struct SideMenuHeaderView: View {
     @ObservedObject var userData : UserDataModel
     var body: some View {
         VStack {
-            
+            //profile image for menu
             HStack{
                 Image(systemName: "person.circle.fill")
                     .imageScale(.large)
-                
+            //nav link to profile view
                 NavigationLink("Profile", destination: Profile(userData: userData))
                     .offset(x:0, y:0)
                     .foregroundColor(.black)
@@ -27,6 +27,7 @@ struct SideMenuHeaderView: View {
             .offset(x:-7)
             
             HStack{
+            //settings image and nav link to settings
                 Image(systemName: "gearshape")
                     .imageScale(.large)
                     .offset(x:-1)
@@ -36,16 +37,8 @@ struct SideMenuHeaderView: View {
             }
             .offset(y: 14)
             
-           /* HStack{
-                Image(systemName: "house.fill")
-                    .imageScale(.large)
-                NavigationLink("Home", destination: HomeScreen())
-                    .offset(x:0, y:0)
-                    .foregroundColor(.black)
-            }
-            .offset(x:-8, y: 27)*/
-            
             HStack{
+            //logout image and nav link
                 Image(systemName: "rectangle.portrait.and.arrow.forward")
                     .imageScale(.large)
                 NavigationLink("Logout", destination: ContentView())

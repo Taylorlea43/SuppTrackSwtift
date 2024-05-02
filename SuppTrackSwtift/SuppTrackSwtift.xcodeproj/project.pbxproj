@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D6322A9C2BC83C0F001943C5 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6322A9B2BC83C0F001943C5 /* ProfileViewModel.swift */; };
 		D6322A9E2BC867C4001943C5 /* Supplement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6322A9D2BC867C4001943C5 /* Supplement.swift */; };
 		D6322AA02BC8B09E001943C5 /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6322A9F2BC8B09E001943C5 /* UserDataModel.swift */; };
 		D66AE4FC2B7D7B6400B5AF64 /* SuppTrackSwtiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66AE4FB2B7D7B6400B5AF64 /* SuppTrackSwtiftApp.swift */; };
@@ -87,6 +88,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D6322A9B2BC83C0F001943C5 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		D6322A9D2BC867C4001943C5 /* Supplement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supplement.swift; sourceTree = "<group>"; };
 		D6322A9F2BC8B09E001943C5 /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
 		D66AE4F82B7D7B6400B5AF64 /* SuppTrackSwtift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuppTrackSwtift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -233,6 +235,7 @@
 			children = (
 				D66D897B2B87E0D80042C719 /* Settings.swift */,
 				D6A008CB2BAB892000704F6C /* Profile.swift */,
+				D6322A9B2BC83C0F001943C5 /* ProfileViewModel.swift */,
 				D6A008C72BA8ECF500704F6C /* SideMenuView.swift */,
 				D6A008C92BA8EDF700704F6C /* SideMenuHeaderView.swift */,
 			);
@@ -411,6 +414,7 @@
 				D69840512BD01AA900E188D7 /* APIView.swift in Sources */,
 				D6BA75EE2B90E8F0007698DD /* FirebaseHelper.swift in Sources */,
 				D66D89842B87E11C0042C719 /* Scanner.swift in Sources */,
+				D6322A9C2BC83C0F001943C5 /* ProfileViewModel.swift in Sources */,
 				D6F8F8652B98D0A00051AA04 /* ForgotEmailMessage.swift in Sources */,
 				D6A008C82BA8ECF500704F6C /* SideMenuView.swift in Sources */,
 				D66AE50C2B7D7E4600B5AF64 /* CreateAccount.swift in Sources */,
@@ -558,7 +562,6 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -590,7 +593,6 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

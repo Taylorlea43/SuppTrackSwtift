@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+//tracks ingredients for a product 
 struct IngredientResponse: Decodable{
     let foods: [ingredient_list]
 }

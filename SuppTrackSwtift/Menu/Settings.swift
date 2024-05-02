@@ -22,20 +22,18 @@ struct Settings: View {
                                     allergy(name: "wheat"),
                                     allergy(name: "soy"),
                                     allergy(name: "dairy")]
-    
-    //@Binding var email: String
 
     var body: some View {
         
         ZStack {
-            
+            //background image
             Image("supptrack background2")
                 .resizable()
                 .offset(x:0, y:-60)
                 .frame(width: 395, height: 800)
         
             VStack{
-                
+                //settings text and email
                 Text("Settings")
                     .font(.system(size: 60, weight: .heavy))
                     .offset(y: -150)
@@ -45,11 +43,11 @@ struct Settings: View {
                     .frame(width: 200, height: 200)
                     .offset(y:-150)
                 HStack{
+                    //change email and password
                     Text("Change Email:")
                         .offset(x:50, y:-50)
                     TextField("Placeholder", text: $userData.email)
                         .offset(x:60, y:-50)
-                    
                 }
                 NavigationLink("Change Password", destination: ForgotEmailMessage())
                     .fontWeight(.thin)
@@ -68,7 +66,7 @@ struct Settings: View {
                 }
             }.offset(x:80, y:180)
             
-            
+            //allergy preferences
             Text("Allergy Preferences")
              .offset(x:-72, y:225)
             List{

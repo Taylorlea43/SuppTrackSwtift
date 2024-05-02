@@ -14,6 +14,7 @@ struct SideMenuView: View {
     
     var body: some View {
         ZStack{
+            //create a rectangle to cover screen for menu
             if isShowing{
                 Rectangle()
                     .opacity(0.3)
@@ -22,6 +23,7 @@ struct SideMenuView: View {
                 
                 HStack{
                     VStack(alignment: .leading, spacing: 32){
+                        //get user data
                         SideMenuHeaderView(userData: userData)
                             .offset(y:30)
                         Spacer()

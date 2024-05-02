@@ -54,12 +54,12 @@ struct CreateAccount: View {
                     .font(.system(size: 14))
                     .foregroundColor(.red)
                     .offset(y: -25)
-               
+               //if passwords do not match add text to state that
                 Button("Next") {
                     passwordsDontMatch = "Passwords do not match"
                 }.foregroundColor(.gray)
                     .offset(y: 92)
-                
+                //check if passwords match
                 if(self.password == self.confirmPassword){
                     NavigationLink("Next", destination: CreateAccountTwo(userData: userData))
                         .simultaneousGesture(TapGesture().onEnded {

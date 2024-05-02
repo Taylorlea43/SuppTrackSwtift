@@ -32,6 +32,7 @@ struct Scanner: View {
             
                  Task{
                      do{
+                         //try searching that upc
                          let result =  try await apiView.searchIngredients("052000135152")
                          textScanned = true
                          

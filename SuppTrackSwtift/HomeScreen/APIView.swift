@@ -8,6 +8,7 @@
 import UIKit
 import SwiftUI
 
+//errors
 enum NetworkError: Error{
     case badURL
     case invalidResponse
@@ -17,6 +18,7 @@ enum NetworkError: Error{
 struct APIView{
     @State var ingredientStrings: [String] = []
     
+    //calls api to search ingredients
     func searchIngredients(_ upc:String) async throws -> [ingredient_list]{
         guard let url = URL(string: "https://trackapi.nutritionix.com/v2/search/item?upc=\(upc)") else {
                 throw NetworkError.badURL

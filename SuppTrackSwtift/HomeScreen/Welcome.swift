@@ -12,11 +12,13 @@ struct Welcome: View {
     var body: some View {
         NavigationStack {
             ZStack {
+                //background image
                 Image("HomeScreen Background")
                     .resizable()
                     .offset(x:0, y:-60)
                     .frame(width: 800, height: 1300)
                 VStack {
+                    //Titles and text
                     Text("SuppTrack").font(.system(size: 60, weight: .heavy))
                         .foregroundColor(.white)
                         .offset(x: -20, y:-270)
@@ -28,7 +30,8 @@ struct Welcome: View {
                  //   SideMenuView(isShowing: $showMenu)
                 }
             }
-            /*/.navigationBarTitleDisplayMode(.inline)
+            //menu
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar{
                 ToolbarItem(placement: .topBarLeading){
                     Button(action: {
@@ -37,7 +40,7 @@ struct Welcome: View {
                         Image(systemName: "line.3.horizontal")
                     })
                 }
-        }*/
+        }
         }
     }
 }
