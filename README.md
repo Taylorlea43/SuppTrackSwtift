@@ -20,7 +20,7 @@ Install XCode to your IOS device
 ## Firebase
 Documentation: https://firebase.google.com/docs
 
-##Carbode
+## Carbode
 barcode scanner: https://github.com/heart/CarBode-Barcode-Scanner-For-SwiftUI
 
 ### Authors
