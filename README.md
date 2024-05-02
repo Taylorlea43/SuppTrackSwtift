@@ -14,12 +14,15 @@ Install XCode to your IOS device
 3. click clone and paste the URL
 
 ## Nutritionix API
-link to get API key: https://developer.nutritionix.com/signup
-API documentation: https://developer.nutritionix.com/docs/v2
+- link to get API key: https://developer.nutritionix.com/signup
+ - API documentation: https://developer.nutritionix.com/docs/v2
 
 ## Firebase
 Documentation: https://firebase.google.com/docs
 
-# Authors
+##Carbode
+barcode scanner: https://github.com/heart/CarBode-Barcode-Scanner-For-SwiftUI
+
+### Authors
 Taylor Lea
 
